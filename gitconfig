@@ -1,0 +1,15 @@
+[user]
+	name = Moritz Krog
+	email = moritzkrog@gmail.com
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore_global
+[alias]
+	co = checkout
+[credential]
+	helper = osxkeychain
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
