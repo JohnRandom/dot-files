@@ -21,6 +21,7 @@ Plugin 'vim-syntastic/Syntastic'
 Plugin 'majutsushi/Tagbar'
 Plugin 'hushicai/tagbar-javascript.vim'
 Plugin 'jakedouglas/exuberant-ctags'
+Plugin 'mileszs/ack.vim'
 
 " OSX stupid backspace fix
 set backspace=indent,eol,start
@@ -57,7 +58,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 " close VIM when NERDTree is last open window
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Utility
 " Remove trailing whitespaces
@@ -80,6 +81,11 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_typescript_checkers = ['tslint']
+
+" The Silver Searcher
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 " HOTKEYS
 map <C-n> :NERDTreeToggle<CR>
