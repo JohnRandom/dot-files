@@ -22,6 +22,7 @@ Plugin 'majutsushi/Tagbar'
 Plugin 'hushicai/tagbar-javascript.vim'
 Plugin 'jakedouglas/exuberant-ctags'
 Plugin 'mileszs/ack.vim'
+Plugin 'Quramy/tsuquyomi'
 
 " OSX stupid backspace fix
 set backspace=indent,eol,start
@@ -75,12 +76,13 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+let g:tsuquyomi_disable_quickfix = 1
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_typescript_checkers = ['tslint']
+let g:syntastic_typescript_checkers = ['tsuquyomi']
 
 " The Silver Searcher
 if executable('ag')
