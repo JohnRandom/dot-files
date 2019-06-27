@@ -47,6 +47,7 @@ set hidden
 set t_Co=256
 set colorcolumn=80,120
 set mouse=a
+set clipboard=unnamedplus
 colorscheme railscasts
 
 " NERDTree
@@ -94,3 +95,4 @@ map <C-n> :NERDTreeToggle<CR>
 map <M-]> :tabn<CR>
 map <M-[> :tabp<CR>
 map <C-Space> :FufFile<CR>
+map <C-y> "+y
