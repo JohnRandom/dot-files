@@ -9,9 +9,12 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="terminalparty"
 
+# Starship for Warp
+eval "$(starship init zsh)"
+
 # Example aliases
-alias zshconfig="atom ~/.zshrc"
-alias ohmyzsh="atom ~/.oh-my-zsh"
+# alias zshconfig="atom ~/.zshrc"
+# alias ohmyzsh="atom ~/.oh-my-zsh"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -42,14 +45,23 @@ alias ohmyzsh="atom ~/.oh-my-zsh"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx git-flow python django themes rails atom nvm)
+plugins=(git osx git-flow python django themes rails nvm)
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # virtualenv wrapper
-source /usr/local/bin/virtualenvwrapper.sh
+# source /usr/local/bin/virtualenvwrapper.sh
 
 # RVM
-source /Users/moritzkrog/.rvm/scripts/rvm
+# source /Users/moritzkrog/.rvm/scripts/rvm
+
+# Initialise NVM
+# source $(brew --prefix nvm)/nvm.sh
+export NVM_DIR="$HOME/.nvm"
+# This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+# This loads nvm bash_completion
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
 
 echo " done."

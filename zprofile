@@ -44,12 +44,9 @@ alias mount.private="hdiutil attach /Users/moritzkrog/Private.dmg -stdinpass"
 # utilities
 alias reset-camera="sudo killall VDCAssistant && sudo killall AppleCameraAssistant"
 
-# Initialise NVM
-source $(brew --prefix nvm)/nvm.sh
-
 # Java
-alias antlr4='java -Xmx500M -cp "/usr/local/lib/java/antlr-4.7-complete.jar:$CLASSPATH" org.antlr.v4.Tool'
-alias antlr3='java -cp "/usr/local/lib/java/antlr-3.5.2-complete.jar:$CLASSPATH" org.antlr.Tool'
-alias grun='java org.antlr.v4.gui.TestRig'
+# alias antlr4='java -Xmx500M -cp "/usr/local/lib/java/antlr-4.7-complete.jar:$CLASSPATH" org.antlr.v4.Tool'
+# alias antlr3='java -cp "/usr/local/lib/java/antlr-3.5.2-complete.jar:$CLASSPATH" org.antlr.Tool'
+# alias grun='java org.antlr.v4.gui.TestRig'
 
 echo " done."
